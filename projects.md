@@ -21,7 +21,7 @@ Lechaim Official is a clothing company I started with a friend. I've built the w
 * Shipments: Sendcloud API
 * Analytics & marketing: Google Analytics and Facebook Pixel
 
-* **[Live link(Dutch)](https://www.lechaimofficial.com/)**
+**[Live link(Dutch)](https://www.lechaimofficial.com/)**
 
 ## Progressive Weather app
 ### Description
@@ -34,8 +34,8 @@ I've built an weather app based on a interactive map. The special thing about th
 * Map: Leaflet
 * Weather: OpenWeather API
 
-* **[Live link](https://progressive-weatherapp.herokuapp.com/)**
-* **[Documentation](https://github.com/Jelmerovereem/progressive-web-apps-2021/blob/master/README.md)**
+**[Live link](https://progressive-weatherapp.herokuapp.com/)**  
+**[Documentation](https://github.com/Jelmerovereem/progressive-web-apps-2021/blob/master/README.md)**
 
 ## AudioBook for Roger
 ### Description
@@ -45,8 +45,8 @@ AudioBook is a website made for a man with vision disorder(macular degeneration)
 * Front-end: HTML, CSS, JavaScript & SpeechRecognition API
 * Front-end framework: Frameworkless
 
-* **[Live link(Dutch)](https://jelmerovereem.github.io/human-centered-design-2021/prototype/index.html)**
-* **[Documentation(Dutch)](https://github.com/Jelmerovereem/human-centered-design-2021/wiki)**
+**[Live link(Dutch)](https://jelmerovereem.github.io/human-centered-design-2021/prototype/index.html)**  
+**[Documentation(Dutch)](https://github.com/Jelmerovereem/human-centered-design-2021/wiki)**
 
 ## Real time tracking tool - trackyjs
 ### Description
@@ -58,6 +58,6 @@ Trackyjs is a tracking tool / analytics tool to track visitors realtime. It's a 
 * Front-end framework: Frameworkless
 * IP-location: geoip-lite
 
-* **[Live link admin](https://trackyjs.herokuapp.com/admin)**
-* **[Live link store-front](https://trackyjs.herokuapp.com/)**
-* **[Documentation](https://github.com/Jelmerovereem/real-time-web-2021/blob/main/README.md)**
+**[Live link admin](https://trackyjs.herokuapp.com/admin)**  
+**[Live link store-front](https://trackyjs.herokuapp.com/)**  
+**[Documentation](https://github.com/Jelmerovereem/real-time-web-2021/blob/main/README.md)**
