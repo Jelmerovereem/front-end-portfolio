@@ -1,13 +1,21 @@
 import React from 'react';
 import './App.css';
-import InputField from './components/atoms/InputField/InputField';
-import Intro from './components/atoms/Intro/Intro';
+import NavEl from './components/molecules/navigation';
+import Header from './components/molecules/Header';
+import About from './components/organisms/About';
+import Projects from './components/organisms/Projects';
+import Contact from './components/organisms/Contact';
+import Footer from './components/organisms/Footer';
 
 function App() {
   return (
-    <div>
-      <Intro />
-      <InputField />
+    <div style={{height: "200vh"}}>
+      <NavEl />
+      <Header />
+      <About />
+      <Projects />
+      <Contact />
+      <Footer />
     </div>
   );
 }

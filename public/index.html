@@ -25,10 +25,56 @@
       Learn how to configure a non-root public URL by running `npm run build`.
     -->
     <title>React App</title>
+    <style>
+      .spinner-container {
+        display: flex;
+      }
+
+      .spinner-container>div {
+        width: 30px;
+        height: 30px;
+        margin: 5px;
+        border-radius: 50%;
+        animation: load 2s infinite;
+      }
+
+      .spinner-container>div:nth-child(2) {
+        animation-delay: .5s;
+      }
+
+      .spinner-container>div:nth-child(3) {
+        animation-delay: 1s;
+      }
+
+      @keyframes load {
+        0% {
+          transform: scale(1);
+          background: grey;
+        }
+
+        50% {
+          transform: scale(1.4);
+          background: #8D5CE0;
+        }
+
+        100% {
+          transform: scale(1);
+          background: grey;
+        }
+
+      }
+
+    </style>
   </head>
   <body>
     <noscript>You need to enable JavaScript to run this app.</noscript>
-    <div id="root"></div>
+    <div id="root">
+      <div class="spinner-container">
+        <div></div>
+        <div></div>
+        <div></div>
+      </div>
+    </div>
     <!--
       This HTML file is a template.
       If you open it directly in the browser, you will see an empty page.

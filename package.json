@@ -24,7 +24,10 @@
       "react-app/jest",
       "eslint:recommended",
       "plugin:react/recommended"
-    ]
+    ],
+    "rules": {
+      "react/prop-types": "off"
+    }
   },
   "browserslist": {
     "production": [
