@@ -96,6 +96,7 @@ const Contact = () => {
 			<Title>Let&apos;s work together</Title>
 			<SubTitle>I will reach out to you asap</SubTitle>
 			<form name="contact" method="POST" data-netlify="true">
+				<input type="hidden" name="form-name" value="contact" />
 				<EmailContainer>
 					<EmailInput placeholder="Email" name="email" />
 					<SubmitBtn type="submit">Contact me</SubmitBtn>
