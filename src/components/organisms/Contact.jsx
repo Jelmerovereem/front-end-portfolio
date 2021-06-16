@@ -1,7 +1,7 @@
 import React from 'react';
 import styled from 'styled-components';
 import * as colors from 'styles/colors';
-import PrimaryBtn from 'components/atoms/PrimaryBtn';
+import * as defaults from 'styles/defaults';
 
 const Container = styled.div`
 	display: block;
@@ -31,7 +31,7 @@ const EmailContainer = styled.div`
 	justify-content: center;
 	align-items: center;
 	margin: 50px;
-	a {
+	button {
 		position: absolute;
 		right: 20%;
 	}
@@ -40,7 +40,7 @@ const EmailContainer = styled.div`
 		input {
 			margin-bottom: 50px;	
 		}
-		a {
+		button {
 			position: static;
 		}
 	}
@@ -68,15 +68,39 @@ const EmailInput = styled.input`
 	}
 `
 
+const SubmitBtn = styled.button`
+	font-family: 'poppins';
+	font-size: 2em;
+	cursor: pointer;
+	text-decoration: none;
+	color: white;
+	background: ${colors.btnPrimary};
+	padding: ${defaults.buttonPadding};
+	border-radius: 50px;
+	transition: background .3s ease;
+	border: none;
+	@media screen and (max-width: 768px) {
+		font-size: 1.5em;
+	}
+	@media screen and (max-width:  480px) {
+		font-size: 1em;
+	}
+	&:hover {
+		background: ${colors.btnHover};
+	}
+`
+
 const Contact = () => {
 	return (
 		<Container id="contact">
 			<Title>Let&apos;s work together</Title>
 			<SubTitle>I will reach out to you asap</SubTitle>
-			<EmailContainer>
-				<EmailInput placeholder="Email" />
-				<PrimaryBtn text="Contact me" />
-			</EmailContainer>
+			<form name="contact" method="POST" netlify>
+				<EmailContainer>
+					<EmailInput placeholder="Email" name="email" />
+					<SubmitBtn type="submit">Contact me</SubmitBtn>
+				</EmailContainer>
+			</form>
 		</Container>
 		)
 }
