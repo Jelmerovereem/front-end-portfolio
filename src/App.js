@@ -9,7 +9,7 @@ import Footer from './components/organisms/Footer';
 
 function App() {
   return (
-    <div style={{height: "200vh"}}>
+    <div>
       <NavEl />
       <Header />
       <About />
