@@ -86,7 +86,7 @@ const HeaderEl = () => {
 				</Title>
 				<SubTitle>I am a <PurpleSpan>creative</PurpleSpan> front-end developer.</SubTitle>
 				<BtnsContainer>
-					<PrimaryBtn text="Hire me"  href="#contact" className="marginBtn" />
+					<PrimaryBtn text="Contact me"  href="#contact" className="marginBtn" />
 					<SecondaryBtn text="Portfolio" href="#projects" className="marginBtn secondaryBtn" />
 				</BtnsContainer>
 			</div>
