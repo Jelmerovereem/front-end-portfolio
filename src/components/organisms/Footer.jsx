@@ -41,6 +41,15 @@ const InfoText = styled.p`
 	text-align: center;
 `
 
+const InfoLink = styled.a`
+	margin: 0;
+	opacity: .6;
+	text-decoration: none;
+	text-align: center;
+	display: block;
+	margin: auto;
+`
+
 const FooterNav = styled.div`
 	display: flex;
 	justify-content: center;
@@ -65,7 +74,8 @@ const Footer = () => {
 		<Container>
 			<div style={{ gridArea: "info-text" }}>
 				<InfoText>Netherlands / + 31 6 12125820</InfoText>
-				<InfoText>Jelmer_overeem@hotmail.com</InfoText>
+				<InfoLink href="mailto:jelmer_overeem@hotmail.com">Jelmer_overeem@hotmail.com</InfoLink>
+				<InfoLink href="https://www.linkedin.com/in/jelmer-overeem-a9a72a190/" target="_blank">LinkedIn</InfoLink>
 			</div>
 			<Title>Portfolio</Title>
 			<FooterNav>
