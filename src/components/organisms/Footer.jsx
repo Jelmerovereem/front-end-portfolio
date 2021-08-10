@@ -47,7 +47,6 @@ const InfoLink = styled.a`
 	text-decoration: none;
 	text-align: center;
 	display: block;
-	margin: auto;
 `
 
 const FooterNav = styled.div`
@@ -75,7 +74,9 @@ const Footer = () => {
 			<div style={{ gridArea: "info-text" }}>
 				<InfoText>Netherlands / + 31 6 12125820</InfoText>
 				<InfoLink href="mailto:jelmer_overeem@hotmail.com">Jelmer_overeem@hotmail.com</InfoLink>
-				<InfoLink href="https://www.linkedin.com/in/jelmer-overeem-a9a72a190/" target="_blank">LinkedIn</InfoLink>
+				<div style={{ display: "flex", justifyContent: "center", whiteSpace: "pre-wrap"}}>
+					<InfoLink href="https://www.linkedin.com/in/jelmer-overeem-a9a72a190/" target="_blank">LinkedIn</InfoLink><span style={{opacity: .6}}> | </span><InfoLink href="https://github.com/Jelmerovereem/">Github</InfoLink>
+				</div>
 			</div>
 			<Title>Portfolio</Title>
 			<FooterNav>
