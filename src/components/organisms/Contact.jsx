@@ -34,6 +34,7 @@ const EmailContainer = styled.div`
 	button {
 		position: absolute;
 		right: 20%;
+		top: 0;
 	}
 	@media screen and (max-width: 1000px) {
 		flex-direction: column;
