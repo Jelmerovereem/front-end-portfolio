@@ -1,5 +1,5 @@
-import React from 'react';
-import styled from 'styled-components';
+import React, { useState } from 'react';
+import styled, { css } from 'styled-components';
 import * as colors from 'styles/colors';
 import * as defaults from 'styles/defaults';
 
@@ -60,8 +60,21 @@ const EmailInput = styled.input`
 	&:focus, &:hover {
 		outline: none;
 		outline-color: ${colors.btnPrimary};
-		border: 2px solid ${colors.btnPrimary};
+		border: 2px solid ${colors.btnPrimary};		
 	}
+
+	&:focus {
+		${(props) => !props.isEmpty && css`
+			&:valid {
+				border: 2px solid green;
+			}	
+		`}
+
+		&:invalid {
+			border: 2px solid red;
+		}
+	}
+
 	@media screen and (max-width: 768px) {
 		width: 80%;
 		padding: 20px 0 20px 15px;
@@ -88,9 +101,42 @@ const SubmitBtn = styled.button`
 	&:hover {
 		background: ${colors.btnHover};
 	}
+
+	${(props) => props.isDisabled && css`
+		background: ${colors.btnDisabled};
+	`}
+
+	&:disabled {
+		cursor: not-allowed;
+
+		&:hover {
+			background: ${colors.btnDisabled};
+		}
+	}
 `
 
 const Contact = () => {
+	const [contactEmail, setContactEmail] = useState("");
+	const [emailIsValid, setEmailIsValid] = useState(false);
+
+	const onChangeEmailInput = (event) => {
+		setContactEmail(event.target.value);
+
+		if (event.target.value) {
+			if (event.target.value.length > 0) {
+				if (event.target.validity.valid) {
+					setEmailIsValid(true);
+				} else {
+					setEmailIsValid(false);
+				}
+			} else {
+				setEmailIsValid(false);
+			}
+		} else {
+			setEmailIsValid(false);
+		}
+	}
+
 	return (
 		<Container id="contact">
 			<Title>Let&apos;s work together</Title>
@@ -98,8 +144,8 @@ const Contact = () => {
 			<form name="contact" method="POST" data-netlify="true">
 				<input type="hidden" name="form-name" value="contact" />
 				<EmailContainer>
-					<EmailInput placeholder="Email" name="email" />
-					<SubmitBtn type="submit">Contact me</SubmitBtn>
+					<EmailInput onChange={onChangeEmailInput} value={contactEmail} isEmpty={!contactEmail} placeholder="Email" type="email" name="email" />
+					<SubmitBtn isDisabled={!emailIsValid} disabled={!contactEmail} type="submit">Contact me</SubmitBtn>
 				</EmailContainer>
 			</form>
 		</Container>
