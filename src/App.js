@@ -10,12 +10,13 @@ import Footer from './components/organisms/Footer';
 function App() {
   return (
     <div>
-      <NavEl />
+      <p>Nope</p>
+      {/* <NavEl />
       <Header />
       <About />
       <Projects />
       <Contact />
-      <Footer />
+      <Footer /> */}
     </div>
   );
 }
