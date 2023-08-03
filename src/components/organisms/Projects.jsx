@@ -2,7 +2,6 @@ import React from 'react';
 import styled from 'styled-components';
 import * as colors from 'styles/colors';
 import PrimaryBtn from 'components/atoms/PrimaryBtn';
-import Fade from 'react-reveal/Fade';
 import LechaimImg from 'assets/img/projects/lechaim.jpg';
 import GyroImg from 'assets/img/projects/gyro.jpg';
 import WeatherAppImg from 'assets/img/projects/progressive_weather_app.png';
@@ -145,8 +144,7 @@ const Projects = () => {
 			<SubTitle>My front-end projects</SubTitle>
 			{
 				projects.map((project, index) => {
-					return <Fade left={index%2 === 0} right={index%2 !== 0} key={index}>
-						<ProjectContainer>
+					return <ProjectContainer key={index}>
 							<div>
 								<ProjectTitle>{project.title}</ProjectTitle>
 								<ProjectDesc>{project.description}</ProjectDesc>
@@ -163,7 +161,6 @@ const Projects = () => {
 								<ProjectImg src={project.img} alt="" />
 							</div>
 						</ProjectContainer>
-					</Fade>
 				})
 			}
 		</Container>
