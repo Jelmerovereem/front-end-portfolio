@@ -54,7 +54,7 @@ const About = () => {
 			</div>
 			<div>
 				<Title>About me</Title>
-				<AboutText>Hello there, my name is Jelmer and I am a creative front-end developer. Currently, studying Communication and Multimedia Design(CMD) at the Amsterdam University of Applied Sciences(3rd year). My love and passion go out to developing beautiful, fast, responsive and intuitive websites and web applications. This passion has already led to some great projects and results!</AboutText>
+				<AboutText>Hello there, my name is Jelmer and I am a creative front-end developer. My love and passion go out to developing beautiful, fast, responsive and intuitive websites and web applications. This passion has already led to some great projects and results!</AboutText>
 				<SecondaryBtn text="My Code Projects" href="#projects" small={true} />
 			</div>
 		</Container>

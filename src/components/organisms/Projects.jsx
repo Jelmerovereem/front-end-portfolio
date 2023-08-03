@@ -5,7 +5,7 @@ import PrimaryBtn from 'components/atoms/PrimaryBtn';
 import LechaimImg from 'assets/img/projects/lechaim.jpg';
 import GyroImg from 'assets/img/projects/gyro.jpg';
 import WeatherAppImg from 'assets/img/projects/progressive_weather_app.png';
-import AudioBookImg from 'assets/img/projects/audioBook.jpg';
+// import AudioBookImg from 'assets/img/projects/audioBook.jpg';
 import TrackyjsImg from 'assets/img/projects/tracking_tool_trackyjs.png';
 
 const Container = styled.div`
@@ -123,13 +123,13 @@ const Projects = () => {
 		link: "https://progressive-weatherapp.herokuapp.com/",
 		tech: ['Node.js', 'Gulp', 'Leaflet', 'OpenWeather API']
 	},
-	{
-		title: "AudioBook",
-		description: "AudioBook is a website made for a man with vision disorder(macular degeneration). This project involves 4 weeks of concepting, testing & prototyping. At the end of the project I've made an website where the navigation is based on speech, key presses or mouse clicks. The website responds with colors and my own voice(I've recorded everything myself!).",
-		img: AudioBookImg,
-		link: "https://jelmerovereem.github.io/human-centered-design-2021/prototype/index.html",
-		tech: ['SpeechRecognition API']
-	},
+	// {
+	// 	title: "AudioBook",
+	// 	description: "AudioBook is a website made for a man with vision disorder(macular degeneration). This project involves 4 weeks of concepting, testing & prototyping. At the end of the project I've made an website where the navigation is based on speech, key presses or mouse clicks. The website responds with colors and my own voice(I've recorded everything myself!).",
+	// 	img: AudioBookImg,
+	// 	link: "https://jelmerovereem.github.io/human-centered-design-2021/prototype/index.html",
+	// 	tech: ['SpeechRecognition API']
+	// },
 	{
 		title: "Real time tracking tool - trackyjs",
 		description: "Trackyjs is a tracking tool / analytics tool to track visitors realtime. It's a small project to play and understand working with realtime sockets.",
