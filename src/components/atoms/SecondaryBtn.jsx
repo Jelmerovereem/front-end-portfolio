@@ -4,7 +4,7 @@ import * as colors from 'styles/colors';
 import * as defaults from 'styles/defaults';
 
 const Button = styled.a`
-	font-size: ${props => props.small ? "1.3em" : "2em"};
+	font-size: ${props => props.$small ? "1.3em" : "2em"};
 	cursor: pointer;
 	text-decoration: none;
 	color: grey;
@@ -21,7 +21,7 @@ const Button = styled.a`
 
 const SecondaryBtn = ({text, href, className, small}) => {
 	return (
-		<Button href={href} className={className} small={small} >{text}</Button>
+		<Button href={href} className={className} $small={small} >{text}</Button>
 		)
 }
 

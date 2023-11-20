@@ -65,7 +65,7 @@ const EmailInput = styled.input`
 	}
 
 	&:focus {
-		${(props) => !props.isEmpty && css`
+		${(props) => !props.$isEmpty && css`
 			&:valid {
 				border: 2px solid green;
 			}	
@@ -103,7 +103,7 @@ const SubmitBtn = styled.button`
 		background: ${colors.btnHover};
 	}
 
-	${(props) => props.isDisabled && css`
+	${(props) => props.$isDisabled && css`
 		background: ${colors.btnDisabled};
 	`}
 
@@ -145,8 +145,8 @@ const Contact = () => {
 			<form name="contact" method="POST" data-netlify="true">
 				<input type="hidden" name="form-name" value="contact" />
 				<EmailContainer>
-					<EmailInput onChange={onChangeEmailInput} value={contactEmail} isEmpty={!contactEmail} placeholder="Email" type="email" name="email" />
-					<SubmitBtn isDisabled={!emailIsValid} disabled={!contactEmail} type="submit">Contact me</SubmitBtn>
+					<EmailInput onChange={onChangeEmailInput} value={contactEmail} $isEmpty={!contactEmail} placeholder="Email" type="email" name="email" />
+					<SubmitBtn $isDisabled={!emailIsValid} disabled={!contactEmail} type="submit">Contact me</SubmitBtn>
 				</EmailContainer>
 			</form>
 		</Container>
