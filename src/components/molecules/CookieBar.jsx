@@ -41,7 +41,7 @@ const CookieBar = () => {
   }, []);
 
   return (
-    <Wrapper style={show ? {} : { display: "flex" }}>
+    <Wrapper style={show ? {} : { display: "none" }}>
       <p>
         Door het gebruik van deze website stem je in met het gebruik van cookies
         voor het verzamelen van anonieme gegevens via Google Analytics. Deze
