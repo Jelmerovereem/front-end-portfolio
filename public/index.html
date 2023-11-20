@@ -1,21 +1,29 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="utf-8" />
-    <link rel="icon" href="%PUBLIC_URL%/favicon.png" />
-    <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <meta name="theme-color" content="#000000" />
-    <meta
-      name="description"
-      content="Portfolio website Jelmer Overeem"
-    />
-    <link rel="apple-touch-icon" href="%PUBLIC_URL%/logo192.png" />
-    <!--
+
+<head>
+  <!-- Google tag (gtag.js) -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-VB1VBT7C6N"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag() { dataLayer.push(arguments); }
+    gtag('js', new Date());
+
+    gtag('config', 'G-VB1VBT7C6N');
+  </script>
+
+  <meta charset="utf-8" />
+  <link rel="icon" href="%PUBLIC_URL%/favicon.png" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta name="theme-color" content="#000000" />
+  <meta name="description" content="Portfolio website Jelmer Overeem" />
+  <link rel="apple-touch-icon" href="%PUBLIC_URL%/logo192.png" />
+  <!--
       manifest.json provides metadata used when your web app is installed on a
       user's mobile device or desktop. See https://developers.google.com/web/fundamentals/web-app-manifest/
     -->
-    <link rel="manifest" href="%PUBLIC_URL%/manifest.json" />
-    <!--
+  <link rel="manifest" href="%PUBLIC_URL%/manifest.json" />
+  <!--
       Notice the use of %PUBLIC_URL% in the tags above.
       It will be replaced with the URL of the `public` folder during the build.
       Only files inside the `public` folder can be referenced from the HTML.
@@ -24,64 +32,64 @@
       work correctly both with client-side routing and a non-root public URL.
       Learn how to configure a non-root public URL by running `npm run build`.
     -->
-    <title>Jelmer Overeem</title>
-    <style>
-      .spinner-container {
-        display: flex;
+  <title>Jelmer Overeem</title>
+  <style>
+    .spinner-container {
+      display: flex;
+    }
+
+    .spinner-container>div {
+      width: 30px;
+      height: 30px;
+      margin: 5px;
+      border-radius: 50%;
+      animation: load 2s infinite;
+    }
+
+    .spinner-container>div:nth-child(2) {
+      animation-delay: .5s;
+    }
+
+    .spinner-container>div:nth-child(3) {
+      animation-delay: 1s;
+    }
+
+    @keyframes load {
+      0% {
+        transform: scale(1);
+        background: grey;
       }
 
-      .spinner-container>div {
-        width: 30px;
-        height: 30px;
-        margin: 5px;
-        border-radius: 50%;
-        animation: load 2s infinite;
+      50% {
+        transform: scale(1.4);
+        background: #8D5CE0;
       }
 
-      .spinner-container>div:nth-child(2) {
-        animation-delay: .5s;
+      100% {
+        transform: scale(1);
+        background: grey;
       }
 
-      .spinner-container>div:nth-child(3) {
-        animation-delay: 1s;
-      }
+    }
+  </style>
+</head>
 
-      @keyframes load {
-        0% {
-          transform: scale(1);
-          background: grey;
-        }
-
-        50% {
-          transform: scale(1.4);
-          background: #8D5CE0;
-        }
-
-        100% {
-          transform: scale(1);
-          background: grey;
-        }
-
-      }
-
-    </style>
-  </head>
-  <body>
-    <form name="contact" netlify method="POST" hidden>
-      <div>
-        <input placeholder="Email" name="email">
-        <button type="submit">Contact me</button>
-      </div>
-    </form>
-    <noscript>You need to enable JavaScript to run this app.</noscript>
-    <div id="root">
-      <div class="spinner-container">
-        <div></div>
-        <div></div>
-        <div></div>
-      </div>
+<body>
+  <form name="contact" netlify method="POST" hidden>
+    <div>
+      <input placeholder="Email" name="email">
+      <button type="submit">Contact me</button>
     </div>
-    <!--
+  </form>
+  <noscript>You need to enable JavaScript to run this app.</noscript>
+  <div id="root">
+    <div class="spinner-container">
+      <div></div>
+      <div></div>
+      <div></div>
+    </div>
+  </div>
+  <!--
       This HTML file is a template.
       If you open it directly in the browser, you will see an empty page.
 
@@ -91,5 +99,6 @@
       To begin the development, run `npm start` or `yarn start`.
       To create a production bundle, use `npm run build` or `yarn build`.
     -->
-  </body>
+</body>
+
 </html>
