@@ -6,6 +6,7 @@ import About from './components/organisms/About';
 import Projects from './components/organisms/Projects';
 import Contact from './components/organisms/Contact';
 import Footer from './components/organisms/Footer';
+import CookieBar from 'components/molecules/CookieBar';
 
 function App() {
   return (
@@ -16,6 +17,7 @@ function App() {
       <Projects />
       <Contact />
       <Footer />
+      <CookieBar/>
     </div>
   );
 }
