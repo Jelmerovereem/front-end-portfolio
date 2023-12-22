@@ -57,31 +57,26 @@ const EmailInput = styled.input`
   border: none;
   padding: 33px 0 33px 15px;
   font-size: 1em;
-  box-shadow: 0 5px 15px lightgrey;
   border: 3px solid white;
   transition: border 0.3s ease;
+  box-shadow: 0 5px 15px lightgrey;
   &:focus,
   &:hover {
     outline: none;
     outline-color: ${colors.btnPrimary};
-	border-color: ${colors.btnPrimary};
-    /* border: 4px solid ${colors.btnPrimary}; */
+    border-color: ${colors.btnPrimary};
   }
 
-  &:focus {
-    ${(props) =>
-      !props.$isEmpty &&
-      css`
-        &:valid {
-          border-color: green;
-          /* border: 2px solid green; */
-        }
-      `}
+  ${(props) =>
+    !props.$isEmpty &&
+    css`
+      &:valid {
+        border-color: green;
+      }
+    `}
 
-    &:invalid {
-		border-color: red;
-      /* border: 2px solid red; */
-    }
+  &:invalid {
+    border-color: red;
   }
 
   @media screen and (max-width: 768px) {
@@ -91,6 +86,7 @@ const EmailInput = styled.input`
 `;
 
 const SubmitBtn = styled.button`
+  box-shadow: 0 5px 15px lightgrey;
   font-family: "poppins";
   font-size: 1.3em;
   cursor: pointer;
@@ -99,7 +95,7 @@ const SubmitBtn = styled.button`
   background: ${colors.btnPrimary};
   padding: ${defaults.buttonPadding};
   border-radius: 50px;
-  transition: background 0.3s ease;
+  transition: background-color 0.3s ease;
   border: none;
   @media screen and (max-width: 768px) {
     font-size: 1.5em;
@@ -107,22 +103,12 @@ const SubmitBtn = styled.button`
   @media screen and (max-width: 480px) {
     font-size: 1em;
   }
-  &:hover {
+  &:hover:not(:disabled) {
     background: ${colors.btnHover};
   }
 
-  ${(props) =>
-    props.$isDisabled &&
-    css`
-      background: ${colors.btnDisabled};
-    `}
-
   &:disabled {
     cursor: not-allowed;
-
-    &:hover {
-      background: ${colors.btnDisabled};
-    }
   }
 `;
 
