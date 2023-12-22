@@ -48,7 +48,8 @@ const EmailContainer = styled.div`
     }
   }
   @media screen and (max-width: 768px) {
-    margin: 50px 0 0 0;
+    margin: 50px auto 0 auto;
+	width: 100%;
   }
 `;
 
